@@ -1,7 +1,7 @@
 package co.com.sofka.compensacionDDD.domain.colaborador.command;
 
 import co.com.sofka.compensacionDDD.domain.colaborador.value.ColaboradorId;
-import co.com.sofka.compensacionDDD.domain.colaborador.value.NombreCompleto;
+import co.com.sofka.compensacionDDD.domain.generics.NombreCompleto;
 import co.com.sofka.domain.generic.Command;
 
 public class ActualizarNombreCompleto extends Command {

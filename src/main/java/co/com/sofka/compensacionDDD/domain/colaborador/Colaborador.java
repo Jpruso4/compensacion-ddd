@@ -2,6 +2,8 @@ package co.com.sofka.compensacionDDD.domain.colaborador;
 
 import co.com.sofka.compensacionDDD.domain.colaborador.event.*;
 import co.com.sofka.compensacionDDD.domain.colaborador.value.*;
+import co.com.sofka.compensacionDDD.domain.generics.HojaDeVidaId;
+import co.com.sofka.compensacionDDD.domain.generics.NombreCompleto;
 import co.com.sofka.compensacionDDD.domain.perfil.value.PerfilId;
 import co.com.sofka.domain.generic.AggregateEvent;
 

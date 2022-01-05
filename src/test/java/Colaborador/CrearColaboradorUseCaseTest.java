@@ -1,19 +1,18 @@
 package Colaborador;
 
-import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.compensacionDDD.domain.colaborador.command.CrearColaborador;
 import co.com.sofka.compensacionDDD.domain.colaborador.event.ColaboradorCreado;
 import co.com.sofka.compensacionDDD.domain.colaborador.value.*;
+import co.com.sofka.compensacionDDD.domain.generics.HojaDeVidaId;
+import co.com.sofka.compensacionDDD.domain.generics.NombreCompleto;
 import co.com.sofka.compensacionDDD.domain.perfil.value.PerfilId;
 import co.com.sofka.compensacionDDD.usecase.colaborador.CrearColaboradorUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.Locale;
 
 public class CrearColaboradorUseCaseTest {
 

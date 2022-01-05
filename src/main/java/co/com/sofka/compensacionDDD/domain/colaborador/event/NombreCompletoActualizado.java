@@ -1,6 +1,6 @@
 package co.com.sofka.compensacionDDD.domain.colaborador.event;
 
-import co.com.sofka.compensacionDDD.domain.colaborador.value.NombreCompleto;
+import co.com.sofka.compensacionDDD.domain.generics.NombreCompleto;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class NombreCompletoActualizado extends DomainEvent {
