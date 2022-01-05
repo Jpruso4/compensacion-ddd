@@ -18,7 +18,7 @@ public class Colaborador extends AggregateEvent<ColaboradorId> {
     public Colaborador(ColaboradorId entityId, HojaDeVidaId hojaDeVidaId, FechaDeNacimiento fechaDeNacimiento, NombreCompleto nombreCompleto, Cedula cedula, Genero genero, Area area, PerfilId perfilId) {
         super(entityId);
         subscribe(new ColaboradorChange(this));
-        appendChange(new ColaboradorCreado(hojaDeVidaId, fechaDeNacimiento, nombreCompleto, cedula, genero, area));
+        appendChange(new ColaboradorCreado(hojaDeVidaId, fechaDeNacimiento, nombreCompleto, cedula, genero, area, perfilId));
     }
 
     public void actualizarFechaDeNacimiento(FechaDeNacimiento fechaDeNacimiento){
