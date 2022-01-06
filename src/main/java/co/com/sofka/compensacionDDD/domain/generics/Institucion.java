@@ -1,4 +1,4 @@
-package co.com.sofka.compensacionDDD.domain.gestionCertificacion.value;
+package co.com.sofka.compensacionDDD.domain.generics;
 
 import co.com.sofka.domain.generic.ValueObject;
 

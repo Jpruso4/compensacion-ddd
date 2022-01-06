@@ -9,6 +9,9 @@ import co.com.sofka.compensacionDDD.domain.perfil.value.InformacionDeContacto;
 import co.com.sofka.compensacionDDD.domain.perfil.value.PerfilId;
 import co.com.sofka.compensacionDDD.domain.perfil.value.ReferenciaId;
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
+
+import java.util.List;
 
 public class Perfil extends AggregateEvent<PerfilId> {
 
@@ -22,6 +25,17 @@ public class Perfil extends AggregateEvent<PerfilId> {
         subscribe(new PerfilChange(this));
         appendChange(new PerfilCreado(hojaDeVidaId, informacionDeContacto, fotoDePerfil));
 
+    }
+
+    private Perfil(PerfilId perfilId) {
+        super(perfilId);
+        subscribe(new PerfilChange(this));
+    }
+
+    public static Perfil from(PerfilId perfilId, List<DomainEvent> retrieveEvents) {
+        var perfil = new Perfil(perfilId);
+        retrieveEvents.forEach(perfil::applyEvent);
+        return perfil;
     }
 
     public void agregarNuevaReferencia(ReferenciaId referenciaId, InformacionDeContacto informacionDeContacto, NombreCompleto nombreCompleto){

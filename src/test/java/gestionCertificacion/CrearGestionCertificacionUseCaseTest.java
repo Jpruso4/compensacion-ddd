@@ -9,7 +9,7 @@ import co.com.sofka.compensacionDDD.domain.gestionCertificacion.command.CrearGes
 import co.com.sofka.compensacionDDD.domain.gestionCertificacion.event.GestionCertificacionCreado;
 import co.com.sofka.compensacionDDD.domain.gestionCertificacion.value.CertificacionId;
 import co.com.sofka.compensacionDDD.domain.gestionCertificacion.value.GestionCertificacionId;
-import co.com.sofka.compensacionDDD.domain.gestionCertificacion.value.Institucion;
+import co.com.sofka.compensacionDDD.domain.generics.Institucion;
 import co.com.sofka.compensacionDDD.domain.gestionCertificacion.value.Nombre;
 import co.com.sofka.compensacionDDD.usecase.gestionCertificacion.CrearGestionCertificacionUseCase;
 import org.junit.jupiter.api.Assertions;

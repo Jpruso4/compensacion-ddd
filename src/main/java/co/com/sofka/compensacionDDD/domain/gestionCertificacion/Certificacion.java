@@ -1,5 +1,6 @@
 package co.com.sofka.compensacionDDD.domain.gestionCertificacion;
 
+import co.com.sofka.compensacionDDD.domain.generics.Institucion;
 import co.com.sofka.compensacionDDD.domain.generics.Periodo;
 import co.com.sofka.compensacionDDD.domain.gestionCertificacion.value.CertificacionId;
 import co.com.sofka.compensacionDDD.domain.gestionCertificacion.value.*;

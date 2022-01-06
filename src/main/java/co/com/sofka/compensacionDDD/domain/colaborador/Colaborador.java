@@ -6,6 +6,9 @@ import co.com.sofka.compensacionDDD.domain.generics.HojaDeVidaId;
 import co.com.sofka.compensacionDDD.domain.generics.NombreCompleto;
 import co.com.sofka.compensacionDDD.domain.perfil.value.PerfilId;
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
+
+import java.util.List;
 
 public class Colaborador extends AggregateEvent<ColaboradorId> {
 
@@ -21,6 +24,17 @@ public class Colaborador extends AggregateEvent<ColaboradorId> {
         super(entityId);
         subscribe(new ColaboradorChange(this));
         appendChange(new ColaboradorCreado(hojaDeVidaId, fechaDeNacimiento, nombreCompleto, cedula, genero, area, perfilId));
+    }
+
+    public Colaborador(ColaboradorId colaboradorId){
+        super(colaboradorId);
+        subscribe(new ColaboradorChange(this));
+    }
+
+    public static Colaborador from(ColaboradorId colaboradorId, List<DomainEvent> retrieveEvents) {
+        var colaborador = new Colaborador(colaboradorId);
+        retrieveEvents.forEach(colaborador::applyEvent);
+        return colaborador;
     }
 
     public void actualizarFechaDeNacimiento(FechaDeNacimiento fechaDeNacimiento){
