@@ -25,7 +25,7 @@ public class ActualizarGeneroUseCaseTest {
 
     @Test
     public void actualizarGeneroColaborador(){
-        Genero genero = new Genero("Masculino");
+        Genero genero = new Genero("masculino");
         ColaboradorId colaboradorId = ColaboradorId.of("xxxx");
 
         var command = new ActualizarGenero(colaboradorId, genero);
@@ -44,12 +44,12 @@ public class ActualizarGeneroUseCaseTest {
 
 
         Assertions.assertEquals("xxxx", event.aggregateRootId());
-        Assertions.assertEquals("Masculino", event.getGenero().value());
+        Assertions.assertEquals("masculino", event.getGenero().value());
     }
 
     private List<DomainEvent> events() {
         return List.of(new GeneroActualizado(
-                new Genero("Masculino")
+                new Genero("masculino")
         ));
     }
 }

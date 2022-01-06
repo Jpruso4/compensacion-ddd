@@ -26,7 +26,7 @@ public class ActualizarAreaUseCaseTest {
 
     @Test
     public void actualizarAreaDelColaborador(){
-        Area area = new Area("Ingeniero");
+        Area area = new Area("Desarrollo");
         ColaboradorId colaboradorId = ColaboradorId.of("xxxxx");
 
         var command = new ActualizarArea(colaboradorId,area);
@@ -44,13 +44,13 @@ public class ActualizarAreaUseCaseTest {
         var event = (AreaActualizada) events.get(0);
 
         Assertions.assertEquals("xxxxx", event.aggregateRootId());
-        Assertions.assertEquals("Ingeniero", event.getArea().value());
+        Assertions.assertEquals("Desarrollo", event.getArea().value());
 
     }
 
     private List<DomainEvent> events() {
         return List.of(new AreaActualizada(
-                new Area("Ingeniero")
+                new Area("Desarrollo")
         ));
     }
 }

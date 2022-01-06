@@ -11,8 +11,9 @@ public class ActualizarAreaUseCase extends UseCase<RequestCommand<ActualizarArea
     @Override
     public void executeUseCase(RequestCommand<ActualizarArea> requestCommand) {
         var command = requestCommand.getCommand();
-        Colaborador colaborador;
-        colaborador = Colaborador.from(command.getColaboradorId(), retrieveEvents());
+        var colaborador = Colaborador.from(command.getColaboradorId(), retrieveEvents());
+
+        colaborador.actualizarArea(command.getArea());
         emit().onResponse(new ResponseEvents(colaborador.getUncommittedChanges()));
     }
 }

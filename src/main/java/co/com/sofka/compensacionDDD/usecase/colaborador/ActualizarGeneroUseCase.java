@@ -11,8 +11,9 @@ public class ActualizarGeneroUseCase extends UseCase<RequestCommand<ActualizarGe
     @Override
     public void executeUseCase(RequestCommand<ActualizarGenero> requestCommand) {
         var command = requestCommand.getCommand();
-        Colaborador colaborador;
-        colaborador = Colaborador.from(command.getColaboradorId(), retrieveEvents());
+        var colaborador = Colaborador.from(command.getColaboradorId(), retrieveEvents());
+
+        colaborador.actualizarGenero(command.getGenero());
         emit().onResponse(new ResponseEvents(colaborador.getUncommittedChanges()));
     }
 }
