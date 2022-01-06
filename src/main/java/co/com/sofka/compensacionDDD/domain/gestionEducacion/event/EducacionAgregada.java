@@ -16,7 +16,7 @@ public class EducacionAgregada extends DomainEvent {
     private final Periodo periodo;
 
     public EducacionAgregada(EducacionId educacionId, Tipo tipo, Estudio estudio, Institucion institucion, Periodo periodo) {
-        super("sofkau.domain.gestioneducacion.educacionAgregada");
+        super("sofkau.domain.gestionEducacion.educacionAgregada");
         this.educacionId = educacionId;
         this.tipo = tipo;
         this.estudio = estudio;

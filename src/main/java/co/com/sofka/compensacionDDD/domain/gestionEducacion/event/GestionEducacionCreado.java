@@ -8,7 +8,7 @@ public class GestionEducacionCreado extends DomainEvent {
     private final HojaDeVidaId hojaDeVidaId;
 
     public GestionEducacionCreado(HojaDeVidaId hojaDeVidaId) {
-        super("sofkau.domain.gestioneducacion.gestionEducacionCreado");
+        super("sofkau.domain.gestionEducacion.gestionEducacionCreado");
         this.hojaDeVidaId = hojaDeVidaId;
     }
 

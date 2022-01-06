@@ -8,7 +8,7 @@ public class EducacionEliminada extends DomainEvent {
     private final EducacionId educacionId;
 
     public EducacionEliminada(EducacionId educacionId) {
-        super("sofkau.domain.gestioneducacion.educacionEliminada");
+        super("sofkau.domain.gestionEducacion.educacionEliminada");
         this.educacionId = educacionId;
     }
 

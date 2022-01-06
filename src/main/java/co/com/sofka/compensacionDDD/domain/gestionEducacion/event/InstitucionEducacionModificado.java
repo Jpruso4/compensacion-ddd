@@ -10,7 +10,7 @@ public class InstitucionEducacionModificado extends DomainEvent {
     private final Institucion institucion;
 
     public InstitucionEducacionModificado(EducacionId educacionId, Institucion institucion) {
-        super("sofkau.domain.gestioneducacion.institucionEducacionModificado");
+        super("sofkau.domain.gestionEducacion.institucionEducacionModificado");
         this.educacionId = educacionId;
         this.institucion = institucion;
     }
